@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Share the happiness</br> with your picture
+                    Share the happiness</br> with a picture
                 </div>
                 <div>
                     <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
