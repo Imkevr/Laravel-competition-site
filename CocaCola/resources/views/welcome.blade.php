@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Share the happiness</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -65,25 +65,27 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Bottle Game
-                </div>
-                <div>
-                    <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
-                </div>
-                @if (Route::has('login'))
-                <div class=" links">
+            @if (Route::has('login'))
+                <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Register a bottle</a>
+                        <a href="{{ route('login') }}">Login</a>
 
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
                     @endauth
                 </div>
             @endif
 
-            </div>
+            <div class="content">
+                <div class="title m-b-md">
+                    Share the happiness</br> with your picture
+                </div>
+                <div>
+                    <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
+                </div>
         </div>
     </body>
 </html>
