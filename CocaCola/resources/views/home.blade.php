@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="container">
-    <h1>{{$user -> username }}</h1>
+    <div class="col-9 pt-5">
+        <div><h1>{{$user -> username }}</h1></div>
+        <div class="pt-4 font-weight-bold">{{ $user->profile->title}}</div>
+        <div>{{$user->profile->description}}</div>
+    </div>
     <div class="row pt-5">
         <div class="col-4">
             <img src="/jpg/people1.jpg" class="w-100 " alt="image peopple 1">
