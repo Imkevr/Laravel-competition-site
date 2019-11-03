@@ -17,8 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/post/{post}', 'PostsController@show');
+// order  of routes is important!
 Route::get('/post/create', 'PostsController@create');
+Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
 
 // name('') == give a route a specific name
