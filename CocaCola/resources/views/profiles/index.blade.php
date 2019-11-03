@@ -7,7 +7,7 @@
             <h1>{{$user->username }}</h1>
             <a href="/post/create">Voeg afbeedling toe</a>
         </div>
-        <a href="#">Bewerk profiel</a>
+        <a href="/profile/{{ $user->id }}/edit">Bewerk profiel</a>
         <div class="d-flex">
         <div class="pr-h"><strong>{{ $user->posts->count() }}</strong> Afbeeldingen</div>
         </div>
