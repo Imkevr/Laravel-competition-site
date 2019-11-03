@@ -25,8 +25,13 @@ class PostsController extends Controller
             $imagePath = request('image')->store('uploads', 'public');
 
         //looking for the authenticated user and adding their id to the post
-        auth()->user()->posts()->create($data);
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath,
+        ]);
 
-        dd(request()->all());//'store test' --> logging data that will be send
+            return redirect('/profile/' . auth()->user()->id);
+
+        //  dd(request()->all());//'store test' --> logging data that will be send
     }
 }
