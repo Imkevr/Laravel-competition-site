@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/post/{post}', 'PostsController@show');
 Route::get('/post/create', 'PostsController@create');
-Route::POST('/post', 'PostsController@store');
+Route::post('/post', 'PostsController@store');
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 // name('') == give a route a specific name
