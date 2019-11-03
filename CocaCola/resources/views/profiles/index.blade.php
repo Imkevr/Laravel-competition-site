@@ -3,7 +3,10 @@
 @section('content')
 <div class="container">
     <div class="col-9 pt-5">
-        <div><h1>{{$user -> username }}</h1></div>
+        <div class="d-flex justify-content-between aling-items-baseline">
+            <h1>{{$user->username }}</h1>
+            <a href="#">Add new contest image</a>
+        </div>
         <div class="pt-4 font-weight-bold">{{ $user->profile->title}}</div>
         <div>{{$user->profile->description}}</div>
     </div>

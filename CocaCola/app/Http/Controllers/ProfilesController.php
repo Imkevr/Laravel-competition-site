@@ -11,7 +11,7 @@ class ProfilesController extends Controller
     {
         //dd($user); --> die and dump to test a value
            $user = User::findOrFail($user);
-            return view('home',[
+            return view('profiles.index',[
             'user' => $user,
              ] );
     }
