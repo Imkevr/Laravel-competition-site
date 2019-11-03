@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -14,7 +15,14 @@ class PostsController extends Controller
     public function create(){
         return view('posts.create');
     }
-
+    public function index(){
+        $users = auth()->user()->pluck('id');
+        //latest() other notation to show post in DESC
+        $posts = Post::whereIn('user_id', $users)->latest()->get();
+        //dd($users);
+        //dd( $posts );
+        return view('posts.index', compact('posts'));
+    }
     public function store(){
 
         $data = request()->validate([
