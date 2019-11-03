@@ -18,6 +18,7 @@ class PostsController extends Controller
     public function index(){
         $users = auth()->user()->pluck('id');
         //latest() other notation to show post in DESC
+        //with user load the relationship
         $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
         //dd($users);
         //dd( $posts );
