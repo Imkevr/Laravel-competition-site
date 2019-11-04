@@ -9,7 +9,7 @@ use App\User;
 class LikesController extends Controller
 {
     public function store(Post $post){
-        return auth()->user()->likes()->toggle($post->user);
+        return auth()->user()->likes()->toggle($post);
     }
 
 

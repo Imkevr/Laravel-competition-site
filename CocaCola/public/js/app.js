@@ -1845,21 +1845,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['postId'],
+  props: ['postId', 'liked'],
   mounted: function mounted() {
     console.log('Component mounted.');
   },
   data: function data() {
     return {
-      status: ' '
+      status: this.liked
     };
   },
   methods: {
     likePost: function likePost() {
+      var _this = this;
+
       //alert('test');
       axios.post('/like/' + this.postId).then(function (response) {
+        _this.status = !_this.status;
         console.log(response.data);
       });
+    }
+  },
+  computed: {
+    buttonText: function buttonText() {
+      return this.status ? 'Undo Like ' : 'Like';
     }
   }
 });
@@ -37173,11 +37181,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c(
-      "button",
-      { staticClass: "btn btn-primary", on: { click: _vm.likePost } },
-      [_vm._v("Like")]
-    )
+    _c("button", {
+      staticClass: "btn btn-primary",
+      domProps: { textContent: _vm._s(_vm.buttonText) },
+      on: { click: _vm.likePost }
+    })
   ])
 }
 var staticRenderFns = []
