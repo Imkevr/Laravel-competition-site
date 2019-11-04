@@ -26,7 +26,7 @@
                     <a href="/post/vote/{{ $post->id }}">Vote</a>
                     <div class="pr-h"><strong>0</strong> Like's</div>
                     <!-- vue component -->
-                    <like-button post_id="{{$post->id}}"></like-button>
+                <like-button post-id="{{ $post->id }}" liked='{{ $liked }}'></like-button>
                 </div>
             </div>
          </div>

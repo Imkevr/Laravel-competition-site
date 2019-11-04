@@ -1849,11 +1849,16 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log('Component mounted.');
   },
+  data: function data() {
+    return {
+      status: ' '
+    };
+  },
   methods: {
     likePost: function likePost() {
       //alert('test');
-      axios.post('/like/' + this.userId).then(function (response) {
-        alert(response.data);
+      axios.post('/like/' + this.postId).then(function (response) {
+        console.log(response.data);
       });
     }
   }

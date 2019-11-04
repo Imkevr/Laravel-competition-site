@@ -49,7 +49,10 @@ class PostsController extends Controller
     // by providing model it will find the post data
     public function show(\App\Post $post)
     {
+        $user_id = auth()->user()->id;
+        $liked = (auth()->user()) ? $post->hasLikes->contains($user_id) : false;
+        //$liked = $post->likes->contains($post) : false ;
         // scompact = same as passing a array
-        return view('posts.show', compact('post'));
+        return view('posts.show', compact('post', 'liked'));
     }
 }

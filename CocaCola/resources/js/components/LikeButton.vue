@@ -10,12 +10,18 @@
         mounted() {
             console.log('Component mounted.')
         },
+        data: function(){
+            return{
+                status:' ',
+            }
+        },
+
         methods: {
             likePost(){
                 //alert('test');
-                axios.post('/like/'+ this.userId)
+                axios.post('/like/'+ this.postId)
                     .then(response =>{
-                        alert(response.data);
+                        console.log(response.data);
                     });
             }
         }

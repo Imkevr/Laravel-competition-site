@@ -8,8 +8,8 @@ use App\Post;
 use App\User;
 class LikesController extends Controller
 {
-    public function store(User $user){
-        return $user->username;
+    public function store(Post $post){
+        return auth()->user()->likes()->toggle($post->user);
     }
 
 
