@@ -24,7 +24,7 @@
                         <a href="/profile/{{ $post->user->id}}">{{ $post->user->username}}</a>
                     </span> {{{ $post->caption}}}</p>
                     <a href="/post/vote/{{ $post->id }}">Vote</a>
-                <div class="pr-h"><strong>{{ $post->hasLikes->count()}}</strong> Like's</div>
+                <div class="pr-h"><strong>{{ $post->hasLikes->count() }}</strong> Like's</div>
                     <!-- vue component -->
                 <like-button post-id="{{ $post->id }}" liked='{{ $liked }}'></like-button>
                 </div>
