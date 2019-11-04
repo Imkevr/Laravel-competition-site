@@ -23,6 +23,7 @@
                     <span class="font-weight-bold text-dark">
                         <a href="/profile/{{ $post->user->id}}">{{ $post->user->username}}</a>
                     </span> {{{ $post->caption}}}</p>
+                    <a href="/post/vote/{{ $post->id }}">Vote</a>
                 </div>
             </div>
          </div>

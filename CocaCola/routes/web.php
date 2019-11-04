@@ -20,8 +20,10 @@ Route::get('/', 'PostsController@index');
 Route::get('/post/create', 'PostsController@create');
 Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
+Route::get('/post/vote/{id}', 'VoteController@vote');
 
 // name('') == give a route a specific name
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
+
