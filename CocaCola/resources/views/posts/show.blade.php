@@ -24,6 +24,8 @@
                         <a href="/profile/{{ $post->user->id}}">{{ $post->user->username}}</a>
                     </span> {{{ $post->caption}}}</p>
                     <a href="/post/vote/{{ $post->id }}">Vote</a>
+                    <div class="pr-h"><strong>0</strong> Like's</div>
+                    <button class="btn btn-primary">Like</button>
                 </div>
             </div>
          </div>
