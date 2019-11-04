@@ -21,6 +21,7 @@ Route::get('/post/create', 'PostsController@create');
 Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
 Route::get('/post/vote/{id}', 'VoteController@vote');
+Route::post('/like/{post}', 'LikesController@store');
 
 // name('') == give a route a specific name
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
