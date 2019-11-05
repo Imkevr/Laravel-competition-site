@@ -14,7 +14,9 @@
 
 
 Auth::routes();
-
+Route::get('/admin', function () {
+    return view('admin\dashboard');
+});
 // order  of routes is important!
 Route::get('/', 'PostsController@index');
 Route::get('/post/create', 'PostsController@create');
