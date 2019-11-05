@@ -36,5 +36,6 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
+    Route::get('/dashboard/register', 'Admin\DashboardController@registered');
 });
 
