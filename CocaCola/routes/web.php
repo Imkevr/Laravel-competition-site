@@ -14,19 +14,27 @@
 
 
 Auth::routes();
-Route::get('/admin', function () {
-    return view('admin\dashboard');
-});
+
 // order  of routes is important!
-Route::get('/', 'PostsController@index');
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/home', 'PostsController@index');
 Route::get('/post/create', 'PostsController@create');
 Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
 Route::get('/post/vote/{id}', 'VoteController@vote');
 Route::post('/like/{post}', 'LikesController@store');
 
+
 // name('') == give a route a specific name
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
+
+Route::group(['middleware' => ['auth','admin']], function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+});
 
