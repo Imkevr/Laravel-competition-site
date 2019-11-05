@@ -39,6 +39,6 @@ class DashboardController extends Controller
     public function readregistersoftdelete(){
         $users=User::withTrashed()->where('id',1 )->get();
 
-        return view('admin\registered-edit' )->with('users', $users);
+        return view('admin\gediskwalificeert' )->with('users', $users);
     }
 }
