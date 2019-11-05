@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Null_;
 
 class DashboardController extends Controller
 {
@@ -24,7 +25,7 @@ class DashboardController extends Controller
         $user->usertype = $request->input('usertype');
         $user->update();
 
-        return redirect('dashboard/register')->with('status','--> Rol van gebruiker "'.$username.'" is bijgewerkt');
+        return redirect('dashboard/register')->with('status','--> Rol van deelnemer "'.$username.'" is bijgewerkt');
 
     }
 
@@ -33,12 +34,17 @@ class DashboardController extends Controller
         $username = $user->name;
         $user->delete();
         //softdelete
-        return redirect('dashboard/register')->with('status','--> Gebruiker "'.$username.'" is gediskwalificeert');
+        return redirect('dashboard/register')->with('status','--> Gebruiker "'.$username.'" is gediskwalificeerd');
     }
 
     public function readregistersoftdelete(){
-        $users=User::withTrashed()->where('id',1 )->get();
+        $users=User::onlyTrashed()->get();
 
         return view('admin\gediskwalificeert' )->with('users', $users);
+    }
+
+    public function restoresoftdelete($id){
+        User::withTrashed()->where('id', $id)->restore();
+        return redirect('dashboard/registered/read/softdelete')->with('status','--> Gebruiker is opnieuw gekwalificeerd');
     }
 }

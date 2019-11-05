@@ -39,7 +39,9 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/dashboard/registered/edit/{id}', 'Admin\DashboardController@registeredit');
     Route::get('/dashboard/register', 'Admin\DashboardController@registered');
     Route::put('/role-update/{id}', 'Admin\DashboardController@registerupdate' );
+
     Route::get('/dashboard/registered/softdelete/{id}','Admin\DashboardController@registersoftdelete' );
     Route::get('/dashboard/registered/read/softdelete','Admin\DashboardController@readregistersoftdelete' );
+    Route::get('/dashboard/registered/softdelete/restore/{id}','Admin\DashboardController@restoresoftdelete' );
 });
 

@@ -9,7 +9,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title">Registered Roles</h4>
+              <h4 class="card-title">Geregristeerde deelnemers</h4>
             </div>
             <div class="card-body">
                     <!--  updated with succes -->
@@ -45,8 +45,17 @@
                             <td> -{{$user->usertype}} </td>
                             <td> -{{$user->last_login_ip}}</td>
                             <td> {{$user->created_at}}</td>
-                            <td> <a href="/dashboard/registered/edit/{{$user->id}}" class="btn btn-succes"> BEWERK ROL</a></td>
-                            <td> <a href="/dashboard/registered/softdelete/{{$user->id}}" class="btn btn-danger"> DISKWALIFICEER GEBRUIKER</a> </td>
+                            <td>
+
+                                <a href="/dashboard/registered/edit/{{$user->id}}" class="btn btn-succes"> BEWERK ROL</a>
+
+                            </td>
+                            <td>
+                                <!-- zo kan een admin zichzelf niet diskwalificeren -->
+                                @if ($user->usertype != 'admin')
+                                     <a href="/dashboard/registered/softdelete/{{$user->id}}" class="btn btn-danger"> DISKWALIFICEER GEBRUIKER</a>
+                                @endif
+                            </td>
                           </tr>
                       @endforeach
                   </tbody>

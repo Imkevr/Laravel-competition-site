@@ -30,7 +30,6 @@
                     <th>Adres </th>
                     <th>Rol </th>
                     <th>Login Ip </th>
-                    <th>Aangemaakt op </th>
                     <th>Gediskwalificeerd op</th>
                     <th></th>
                     <th></th>
@@ -42,12 +41,11 @@
                             <td> {{$user->name}} </td>
                             <td>  {{$user->username}}  </td>
                             <td>  {{$user->email}} </td>
-                            <td>  -{{$user->adres}} </td>
+                            <td>  {{$user->adres}} </td>
                             <td> -{{$user->usertype}} </td>
                             <td> -{{$user->last_login_ip}}</td>
-                            <td> {{$user->created_at}}</td>
                             <td> {{$user->deleted_at}}</td>
-                            <td> <a href="/dashboard/registered/edit/{{$user->id}}" class="btn btn-success"> KWALIFICEER GEBRUIKER OPNIEUW</a></td>
+                            <td> <a href="/dashboard/registered/softdelete/restore/{{$user->id}}" class="btn btn-success"> KWALIFICEER GEBRUIKER OPNIEUW</a></td>
                             <td> <a href="/dashboard/registered/softdelete/{{$user->id}}" class="btn btn-danger"> GEBRUIKER DEFINITIEF VERWIJDEREN</a> </td>
                           </tr>
                       @endforeach
