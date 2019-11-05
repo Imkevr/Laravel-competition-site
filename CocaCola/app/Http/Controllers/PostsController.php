@@ -55,4 +55,6 @@ class PostsController extends Controller
         // scompact = same as passing a array
         return view('posts.show', compact('post', 'liked'));
     }
+
+
 }

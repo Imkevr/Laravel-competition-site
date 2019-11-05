@@ -28,6 +28,7 @@
                     <!-- vue component -->
                 <like-button post-id="{{ $post->id }}" liked='{{ $liked }}'></like-button>
                 </div>
+
             </div>
          </div>
     </div>

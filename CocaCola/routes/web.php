@@ -25,6 +25,7 @@ Route::get('/post/{post}', 'PostsController@show');
 Route::post('/post', 'PostsController@store');
 Route::get('/post/vote/{id}', 'VoteController@vote');
 Route::post('/like/{post}', 'LikesController@store');
+Route::post('/post', 'PostsController@store');
 
 
 // name('') == give a route a specific name
