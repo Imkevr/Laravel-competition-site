@@ -4,26 +4,35 @@
     Dashboard | Coca-Cola Image contest
 @endsection
 
-@section('content')<div class="row">
+@section('content')
+<div class="row">
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Registered Roles</h4>
             </div>
             <div class="card-body">
+                    <!--  updated with succes -->
+                    @if (session('status'))
+                        <div class="alert alert-success text-dark" role="alert">
+                            {{session('status')}}
+                        </div>
+                    @endif
+                </div>
+            <div class="card-body">
               <div class="table-responsive">
                 <table class="table">
                   <thead class=" text-primary">
-                    <th>User id </th>
+                    <th>User# </th>
                     <th>Naam </th>
                     <th>Username </th>
                     <th>Email </th>
                     <th>Adres </th>
-                    <th>Role </th>
-                    <th>login Ip </th>
-                    <th>aangemaakt op </th>
-                    <th>EDIT</th>
-                    <th>DELETE</th>
+                    <th>Rol </th>
+                    <th>Login Ip </th>
+                    <th>Aangemaakt op </th>
+                    <th></th>
+                    <th></th>
                   </thead>
                   <tbody>
                       @foreach ($users as $user)
@@ -36,8 +45,8 @@
                             <td> -{{$user->usertype}} </td>
                             <td> -{{$user->last_login_ip}}</td>
                             <td> {{$user->created_at}}</td>
-                            <td> <a href="#" class="btn btn-succes"> EDIT</a></td>
-                            <td> <a href="#" class="btn btn-danger"> DELETE</a> </td>
+                            <td> <a href="/dashboard/registered/edit/{{$user->id}} " class="btn btn-succes"> BEWERK ROL</a></td>
+                            <td> <a href="#" class="btn btn-danger"> DISKWALIFICEER GEBRUIKER</a> </td>
                           </tr>
                       @endforeach
                   </tbody>

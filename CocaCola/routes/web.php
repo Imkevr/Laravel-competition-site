@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
+    Route::get('/dashboard/registered/edit/{id}', 'Admin\DashboardController@registeredit');
     Route::get('/dashboard/register', 'Admin\DashboardController@registered');
+    Route::put('/role-update/{id}', 'Admin\DashboardController@registerupdate' );
 });
 
