@@ -19,7 +19,8 @@ class AdminMiddleware
             return $next($request);
         }
         else{
-            return redirect('/home');
+            //if user tries to acces dashboard it wil be redirected home with status message
+            return redirect('/home')->with('status', "Acces to view this page has been denied");
         }
 
     }
