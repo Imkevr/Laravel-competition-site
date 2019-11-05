@@ -5,7 +5,7 @@
         <div class="card-body">
             <!--  if user tries to acces dashboard without admin role allert error-->
             @if (session('status'))
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-warning text-dark" role="alert">
                     {{session('status')}}
                 </div>
             @endif
