@@ -70,9 +70,9 @@
             </a>
           </li>
           <li class="active ">
-            <a href="./tables.html">
+            <a href="/dashboard/registered/read/softdelete">
               <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <p>Gediskwalificeerden</p>
             </a>
           </li>
           <li>

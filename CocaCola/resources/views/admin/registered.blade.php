@@ -45,8 +45,8 @@
                             <td> -{{$user->usertype}} </td>
                             <td> -{{$user->last_login_ip}}</td>
                             <td> {{$user->created_at}}</td>
-                            <td> <a href="/dashboard/registered/edit/{{$user->id}} " class="btn btn-succes"> BEWERK ROL</a></td>
-                            <td> <a href="#" class="btn btn-danger"> DISKWALIFICEER GEBRUIKER</a> </td>
+                            <td> <a href="/dashboard/registered/edit/{{$user->id}}" class="btn btn-succes"> BEWERK ROL</a></td>
+                            <td> <a href="/dashboard/registered/softdelete/{{$user->id}}" class="btn btn-danger"> DISKWALIFICEER GEBRUIKER</a> </td>
                           </tr>
                       @endforeach
                   </tbody>

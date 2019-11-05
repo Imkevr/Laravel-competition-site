@@ -27,4 +27,18 @@ class DashboardController extends Controller
         return redirect('dashboard/register')->with('status','--> Rol van gebruiker "'.$username.'" is bijgewerkt');
 
     }
+
+    public function registersoftdelete($id){
+        $user= User::findOrFail($id);
+        $username = $user->name;
+        $user->delete();
+        //softdelete
+        return redirect('dashboard/register')->with('status','--> Gebruiker "'.$username.'" is gediskwalificeert');
+    }
+
+    public function readregistersoftdelete(){
+        $users=User::withTrashed()->where('id',1 )->get();
+
+        return view('admin\registered-edit' )->with('users', $users);
+    }
 }
