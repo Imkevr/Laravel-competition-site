@@ -80,16 +80,24 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Share the happiness</br> with a picture
-                </div>
+
                 <div>
                     <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
                 </div>
+                <div class="title m-b-md">
+                        Deel 'The Happiness' met </br> een foto en win!
+                    </div>
                 <div>
-                    <h2>Deelnemen is eenvoudig!</h2>
+                    <h1>Deelnemen is super eenvoudig</h1>
+                    <h2 class="left">STAP 1: </h2>
+                    <h3>Maak een profiel aan om deel te nemen</h3>
+                    <h2 class="left">STAP 2: </h2>
+                    <h3>Maak foto's van jouw Coca Cola hapinness moment en post ze op jouw profiel</h3>
+                    <h2 class="left">STAP 3: </h2>
+                    <h3>Krijg de meeste Like's en win!</h3>
 
                 </div>
+
         </div>
     </body>
 </html>
