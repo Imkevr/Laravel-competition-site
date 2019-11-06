@@ -10,6 +10,19 @@
                 </div>
             @endif
         </div>
+        @foreach ($winnersposts as $winner )
+            @foreach ($posts as $post )
+                @if ($winner->post_id === $post->id)
+                <div class="row">
+                        <div class="col-6 offset-3">
+                            <h1>Winner</h1>
+                        <a href="/profile/{{ $post->user->id}}">
+                            <img src="/storage/{{ $post->image }}" class="w-100"/></a>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        @endforeach
       @foreach ($posts as $post)
         <div class="row">
                 <div class="col-6 offset-3">

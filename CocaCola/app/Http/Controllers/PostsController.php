@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Winner;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
@@ -22,7 +24,9 @@ class PostsController extends Controller
         $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
         //dd($users);
         //dd( $posts );
-        return view('posts.index', compact('posts'));
+        $winnersposts = DB::select('select post_id from winners group by post_id');
+       // dd($winnersposts);
+        return view('posts.index', compact('posts','winnersposts'));
     }
     public function store(){
 
