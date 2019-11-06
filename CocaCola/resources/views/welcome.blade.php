@@ -86,6 +86,10 @@
                 <div>
                     <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
                 </div>
+                <div>
+                    <h2>Deelnemen is eenvoudig!</h2>
+
+                </div>
         </div>
     </body>
 </html>

@@ -38,8 +38,8 @@ class contestDuration extends Command
      */
     public function handle()
     {
-      // $outcome = DB::select('select post_id, COUNT(post_id) from post_user group by post_id');
-            alert("Schedueled task done! well donzo");
+       //$outcome = DB::select('select post_id, COUNT(post_id) from post_user group by post_id desc');
+         //   alert("Schedueled task done! well donzo");
 
     }
 }
