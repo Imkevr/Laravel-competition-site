@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Null_;
 
 class DashboardController extends Controller
 {

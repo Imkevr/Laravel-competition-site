@@ -46,7 +46,6 @@
                             <td> -{{$user->last_login_ip}}</td>
                             <td> {{$user->deleted_at}}</td>
                             <td> <a href="/dashboard/registered/softdelete/restore/{{$user->id}}" class="btn btn-success"> KWALIFICEER GEBRUIKER OPNIEUW</a></td>
-                            <td> <a href="/dashboard/registered/softdelete/{{$user->id}}" class="btn btn-danger"> GEBRUIKER DEFINITIEF VERWIJDEREN</a> </td>
                           </tr>
                       @endforeach
                   </tbody>

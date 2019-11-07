@@ -9,27 +9,13 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h4 class="card-title"> Simple Table</h4>
+              <h2 class="card-title"> Welcome op het Admin dashboard!</h2>
             </div>
             <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class=" text-primary">
-                    <th> Name </th>
-                    <th>Country </th>
-                    <th> City </th>
-                    <th class="text-right"> Salary </th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td> Dakota Rice </td>
-                      <td> Niger </td>
-                      <td> Oud-Turnhout</td>
-                      <td class="text-right">Oud-Turnhout</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  <h5>Vanaf hier kan je via het menu aan de linker kant alle geregistreerde deelnemers bekijken.</h5>
+                  <h5>Menu uitleg:</h5>
+                  <p>Gebruikers --> kan je alle gebruikers bekijken / rol aanpassen / diskwalificeren</p>
+                  <p>Gediskwalificeerden --> Hier kan je gebruikers terug kwalificeren</p>
             </div>
           </div>
         </div>
