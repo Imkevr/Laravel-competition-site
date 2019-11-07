@@ -3,23 +3,24 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Database;
-
-class contestDuration extends Command
+use Illuminate\Support\Facades\Mail;
+use App\Winner;
+use App\Post;
+class sendMail extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'daily:winner';
+    protected $signature = 'do:sendmail';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'This will select a daily contest winner';
+    protected $description = 'Send email with picked winners to head admin';
 
     /**
      * Create a new command instance.
@@ -38,8 +39,5 @@ class contestDuration extends Command
      */
     public function handle()
     {
-       //$outcome = DB::select('select post_id, COUNT(post_id) from post_user group by post_id desc');
-         //   alert("Schedueled task done! well donzo");
-
     }
 }
