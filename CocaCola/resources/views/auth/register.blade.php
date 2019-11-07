@@ -4,8 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <h1 class="pt-4 pb-5"style="text-align: center">Coca Cola "share the Happiness" wedstrijd</h1>
+            <div class="card" style="border-color: #E3342F;">
+                <div class="card-header text-white" style="background-color: #E3342F;"> <h3>Registreer</h3> </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -91,7 +92,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                   Registreer account
                                 </button>
                             </div>
                         </div>

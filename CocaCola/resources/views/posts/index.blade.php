@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+            <a href="/profile/{{$userId}}" style="color:#CF4037;"><h3>Ga naar mijn profiel</h3> </a>
         <div class="card-body">
             <!--  if user tries to acces dashboard without admin role allert error-->
             @if (session('status'))

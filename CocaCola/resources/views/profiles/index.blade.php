@@ -11,12 +11,12 @@
                 <h1>{{$user->username }}</h1>
                 <!-- will authorize if viewer can see add image link -->
                 @can('update', $user->profile)
-                    <a href="/post/create">Voeg afbeedling toe</a>
+                    <a href="/post/create"  style="color:#CF4037;">Voeg afbeedling toe</a>
                 @endcan
             </div>
             <!-- will authorize if viewer can see edit link -->
             @can('update', $user->profile)
-                <a href="/profile/{{ $user->id }}/edit">Bewerk profiel</a>
+                <a href="/profile/{{ $user->id }}/edit"  style="color:#CF4037;">Bewerk profiel</a>
             @endcan
             <div class="d-flex">
             <div class="pr-h"><strong>{{ $user->posts->count() }}</strong> Afbeeldingen</div>

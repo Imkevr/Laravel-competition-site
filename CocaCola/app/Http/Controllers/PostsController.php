@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,6 +17,7 @@ class PostsController extends Controller
         return view('posts.create');
     }
     public function index(){
+        $userId = Auth::id();
         $users = auth()->user()->pluck('id');
         //latest() other notation to show post in DESC
         //with user load the relationship
@@ -25,7 +26,7 @@ class PostsController extends Controller
         //dd( $posts );
         $winnersposts = DB::select('select post_id from winners group by post_id');
        // dd($winnersposts);
-        return view('posts.index', compact('posts','winnersposts'));
+        return view('posts.index', compact('posts','winnersposts','userId'));
     }
     public function store(){
 
