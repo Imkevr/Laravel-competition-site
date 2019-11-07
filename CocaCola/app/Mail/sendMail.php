@@ -18,11 +18,11 @@ class sendMail extends Mailable
      */
     public function __construct()
     {
-        $winnersposts = DB::select('select post_id from winners group by post_id');
-        $posts = DB::select('select * from posts ');
+        //$winnersposts = DB::select('select post_id from winners group by post_id');
+        //$posts = DB::select('select * from posts ');
 
-        $this->winnerposts =$winnersposts;
-        $this->posts=$posts;
+       // $this->winnerposts =$winnersposts;
+        //$this->posts=$posts;
     }
 
     /**
