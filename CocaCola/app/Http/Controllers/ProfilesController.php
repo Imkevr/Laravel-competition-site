@@ -20,6 +20,7 @@ class ProfilesController extends Controller
         // unauthorized viewer will get a 403
         $this->authorize('update', $user->profile);
         return view('profiles.edit', compact('user'));
+
     }
 
     public function update(User $user){

@@ -6,8 +6,8 @@
         <div class="col-md-8">
 
             <h1 class="pt-4 pb-5"style="text-align: center">Coca Cola "share the Happiness" wedstrijd</h1>
-            <div class="card">
-                <div class="card-header ">{{ __('Login') }}</div>
+            <div class="card" style="border-color: #E3342F;">
+                <div class="card-header text-white " style="background-color: #E3342F;"> <h3>{{ __('Login') }}</h3> </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -71,7 +71,6 @@
             </div>
         </div>
     </div>
-    <img src="/jpg/people7.jpg" style="height: 500px;" class="pr-3">
 
 </div>
 @endsection

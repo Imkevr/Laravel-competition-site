@@ -27,16 +27,33 @@
                 height: 100vh;
                 margin: 0;
             }
+            .row {
+                     display: flex;
+                     flex-wrap: wrap;
+                     padding: 0 4px;
+                }
+
+/* Create two equal columns that sits next to each other */
+            .column {
+            flex: 50%;
+             padding: 0 4px;
+            }
+
+        .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        }
 </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-danger shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
                     <div><img src="/png/cocaColaLogo.png" style="height: 50px; border-right: 3px solid #fff" class="pr-3"></div>
-                    <div class="pl-3 pt-3 text-white">Share the happiness</div>
+                    <div class="pl-3 pt-3 text-white" >Share the happiness</div>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

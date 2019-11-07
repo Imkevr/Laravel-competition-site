@@ -64,7 +64,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref ">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -78,8 +78,8 @@
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
+            </div>
+            <div class="content" style="margin-top:100px;">
 
                 <div>
                     <div><img src="/svg/cocaColahome.svg" style="height: 500px;" class="pr-3"></div>
@@ -87,14 +87,24 @@
                 <div class="title m-b-md">
                         Deel 'The Happiness' met </br> een foto en win!
                     </div>
-                <div>
+                <div style="border:solid 1px grey; background-color:white; box-shadow: 10px 10px 8px 10px #888888; margin-bottom:100px; " >
                     <h1>Deelnemen is super eenvoudig</h1>
                     <h2 class="left">STAP 1: </h2>
                     <h3>Maak een profiel aan om deel te nemen</h3>
                     <h2 class="left">STAP 2: </h2>
-                    <h3>Maak foto's van jouw Coca Cola hapinness moment en post ze op jouw profiel</h3>
+                    <h3>Maak foto's van jouw <span style="color:#CF4037">Coca Cola hapinness moment</span>  en post ze op jouw profiel</h3>
                     <h2 class="left">STAP 3: </h2>
                     <h3>Krijg de meeste Like's en win!</h3>
+                </div>
+                <div>
+                    <h1>Registreer je snel of login en post je foto!</h1>
+
+                </div>
+                <div class="pt-5">
+                        <h2>Wat valt er te winnen?</h2>
+                        <h2> 4 Weken lang wordt er elke week een winnaar gekozen</h2>
+                        <h2><span style="color:#CF4037">Elke winnaar krijgt een reisje voor 2 personen naar New York!!</span></h2>
+                        <div><img src="/jpg/newYork.jpg" style="height: 500px;" class="pr-3"></div>
 
                 </div>
 
