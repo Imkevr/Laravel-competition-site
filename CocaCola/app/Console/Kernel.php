@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\newWinner::class,
+        Commands\mailAdmin::class,
     ];
 
     /**
@@ -24,8 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('daily:winner')
-            ->cron('14 * * * *');
+            $schedule->command('do:newwinner')->daily();
     }
 
     /**
